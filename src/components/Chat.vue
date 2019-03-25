@@ -9,7 +9,6 @@
                <p class="time">{{ message.timestamp }}</p>
              </li>
          </ul>
-        <b-card-text></b-card-text>
         <b-form>
             <app-new-message :name="name"></app-new-message>
         </b-form>
@@ -45,13 +44,12 @@ export default {
                         id: doc.id,
                         name: doc.data().name,
                         content: doc.data().content,
-                        timestamp: moment(doc.data().timestamp).format('LT')
+                        timestamp: moment(doc.data().timestamp).format('lll')
                     })
                 }
             })
         })
     }
-
 }
 
 </script>
@@ -64,7 +62,7 @@ p.Sender {
     font-size: 20px;
     font-weight: bold;
     display: inline-block !important;
-    color: rgb(79, 79, 107); 
+    color:rgb(68, 82, 72); 
     margin-bottom:0;
 }
 
@@ -89,11 +87,41 @@ p.message {
 }
 
 .textChat {
-    margin-top: 8%;
+    margin-top: 8%;  
+    color:rgb(107, 110, 110);
+}
+
+.text-left.chatlist {
+    background-color: rgb(176, 245, 198);
+    margin: 10px;
+    border-radius: 20px;
+    padding:6px;
+    padding-bottom: 0px;
+}
+
+.text-center{
+    border-style: none;
+
 }
 
 ul {
     padding: 0;
+    
+}
+
+.card-body{
+   padding: 10px;
+   padding-top:5px;
+   border: 1px solid rgba(105,224,143,1);
+   border-radius: 15px;
+   -webkit-box-shadow: 10px 10px 23px -10px rgba(105,224,143,1);
+   -moz-box-shadow: 10px 10px 23px -10px rgba(105,224,143,1);
+   box-shadow: 10px 10px 23px -10px rgba(105,224,143,1); 
+   
+}
+.card-header{
+    background-color: rgb(255, 255, 255) !important;
+    border: none;
     
 }
 

@@ -6,12 +6,12 @@ import Chat from '../components/Chat.vue'
 export const routes =
      [
         {
-            path: '/Home',
+            path: '/',
             name: 'Home',
             component: Home
         },
         {
-            path: '/Home/Chat',
+            path: '/Chat',
             name: 'Chat',
             component: Chat,
             props: true,

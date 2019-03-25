@@ -1,14 +1,14 @@
 <template>
     <div>
         <b-navbar toggleable="lg"  variant="info" clas="Navbar">
-            <b-navbar-brand class="brandName" to="/Home">Chatter <i class="far fa-comment fa-2x"></i></b-navbar-brand>
+            <b-navbar-brand class="brandName" to="/">Chatter <i class="far fa-comment fa-2x"></i></b-navbar-brand>
 
             <b-navbar-toggle target="nav_collapse"/>
 
             <b-collapse is-nav id="nav_collapse">
             <b-navbar-nav>
-                <b-nav-item to="/Home">Home</b-nav-item>
-                <b-nav-item to="/Home/Chat">Chat</b-nav-item>
+                <b-nav-item to="/">Home</b-nav-item>
+                <b-nav-item to="/Chat">Chat</b-nav-item>
             </b-navbar-nav>
             <!-- Right aligned nav items -->
             </b-collapse>

@@ -62,7 +62,7 @@ input {
   box-shadow: none;
   border: 0;
   outline: 0;
-  border-bottom: 2px solid rgb(47, 47, 49);
+  border-bottom: 2px solid rgb(144, 144, 148);
 }
 
 input:focus,
