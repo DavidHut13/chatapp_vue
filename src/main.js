@@ -5,10 +5,13 @@ import { routes } from './Router/routes.js'
 import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+import VueChatScroll from 'vue-chat-scroll'
 
-Vue.config.productionTip = false
+
+
+
 Vue.use(BootstrapVue)
-
+Vue.use(VueChatScroll)
 
 Vue.use(VueRouter)
 const router = new VueRouter ({

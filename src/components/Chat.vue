@@ -2,7 +2,7 @@
 <div>
     <b-card-group deck class=" textChat">
      <b-card align="center">
-         <ul slot="header" >
+         <ul slot="header" v-chat-scroll>
              <li class="text-left chatlist"  v-for="message in messages" :key="message.id">
                <p class="Sender">{{ message.name}}: </p>
                <p class="text-left message"> {{ message.content }}</p>  
@@ -96,7 +96,7 @@ p.message {
     margin: 10px;
     border-radius: 20px;
     padding:6px;
-    padding-bottom: 0px;
+    padding-bottom: 1px;
 }
 
 .text-center{
@@ -112,6 +112,7 @@ ul {
 .card-body{
    padding: 10px;
    padding-top:5px;
+   margin-top: 5px;
    border: 1px solid rgba(105,224,143,1);
    border-radius: 15px;
    -webkit-box-shadow: 10px 10px 23px -10px rgba(105,224,143,1);
@@ -122,7 +123,19 @@ ul {
 .card-header{
     background-color: rgb(255, 255, 255) !important;
     border: none;
-    
+    max-height: 500px !important;
+    overflow-y: auto;
+}
+
+.card-header::-webkit-scrollbar {
+    width:8px;
+}
+
+.card-header::-webkit-scrollbar-track {
+    background: #ddd;
+}
+.card-header::-webkit-scrollbar-thumb {
+    background: #aaa;
 }
 
 
